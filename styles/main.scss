@@ -1,0 +1,648 @@
+// this website has been designed by Cornelius Labuschagne
+// author website link: http://cornfolio.dx.am
+// contact the author via this website for further queries or support
+// Mobile optimisation was first priority when designing the website template
+// anyone who obtains a copy of this template is free to change it as needed to match the needs of the owner of the license
+//please note this only applicable if you purchased the template form the author
+// if you did not purchase this content please do so and support the author.
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+// all imports are listed here
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+// declaring the sass variables here if needed
+// you can change these colors to your color template
+
+$red: #ff4e4e;
+$light: #ddd;
+$medium: #666;
+$dark: #222;
+$trans: 0.4s all;
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+// the main styling for the content
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background: $light;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  background: $medium;
+  height: 1px;
+  width: 60vw;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+// begin navbar styles
+.navbar_scrolled {
+  height: 40px !important;
+  background: #fff;
+  transition: $trans;
+  position: fixed !important;
+  -moz-animation-name: slide;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 0.4s;
+  -o-animation-name: slide;
+  -o-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-name: slide;
+  animation-duration: 0.4s;
+  .nav-social-container {
+    svg {
+      fill: $dark !important;
+      transition: $trans;
+      &:hover {
+        fill: $red !important;
+      }
+    }
+  }
+  .navbar-brand {
+    a {
+      color: $dark;
+    }
+    color: $dark;
+  }
+  .menu-btn_open {
+    transition: $trans;
+    .menu-btn__bar {
+      transition: $trans;
+      &--1 {
+        transform: translateY(10px) rotate(45deg) !important;
+        width: 20px;
+        background: $red;
+      }
+      &--2 {
+        opacity: 0;
+      }
+      &--3 {
+        transform: translateY(-10px) rotate(-45deg) !important;
+        width: 20px;
+        background: $red;
+      }
+    }
+  }
+  .menu-btn {
+    height: 30px !important;
+    grid-template-rows: repeat(3, 10.5px) !important;
+    &__bar {
+      background: $dark !important;
+    }
+    &:hover {
+      .menu-btn__bar {
+        background: $red !important;
+        width: 35px !important;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  z-index: 9999;
+  .nav-social-container {
+    justify-content: left;
+    margin-left: 1rem;
+    grid-template-columns: repeat(3, 25px);
+    svg {
+      fill: $light;
+      transition: $trans;
+      &:hover {
+        fill: $red !important;
+      }
+    }
+  }
+  &-brand {
+    a {
+      color: $light;
+      text-decoration: none;
+    }
+    color: $light;
+  }
+  .menu-btn {
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    margin-right: 1rem;
+    grid-template-rows: repeat(3, 13px);
+    &__bar {
+      width: 30px;
+      height: 2px;
+      background: $light;
+      justify-self: right;
+      transition: $trans;
+      &--1 {
+        width: 30px;
+      }
+      &--2 {
+        width: 20px;
+      }
+      &--3 {
+        width: 25px;
+      }
+    }
+    &:hover {
+      .menu-btn__bar {
+        background: $red;
+        width: 35px !important;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+.menu-btn_open {
+  transition: $trans;
+  .menu-btn__bar {
+    transition: $trans;
+    &--1 {
+      transform: translateY(13px) rotate(45deg);
+      width: 30px;
+      background: $red;
+    }
+    &--2 {
+      opacity: 0;
+    }
+    &--3 {
+      transform: translateY(-13px) rotate(-45deg);
+      width: 30px;
+      background: $red;
+    }
+  }
+}
+
+.nav-menu__open {
+  transform: translateY(0) !important;
+  transition: $trans;
+}
+
+.nav-menu {
+  position: fixed;
+  background: $dark;
+  color: $light;
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100%;
+  transition: $trans !important;
+  grid-template-rows: repeat(5, 50px) !important;
+  z-index: 9998;
+  &__link {
+    color: $medium;
+    text-decoration: none;
+    transition: $trans;
+    height: 50px;
+    width: 100px;
+    margin: auto;
+    text-transform: uppercase;
+    &:hover {
+      color: $light;
+    }
+  }
+}
+
+// end navbar styles
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+// begin landing page styles
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .landing-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    display: grid;
+    place-content: center;
+    h2 {
+      color: $red;
+      width: 250px;
+      text-align: center;
+      margin: auto;
+    }
+    p {
+      width: 70%;
+      margin: auto;
+      color: $medium;
+    }
+  }
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  margin: auto;
+  background-color: $medium;
+  border-radius: 50%;
+  display: inline-block;
+  transition: $trans;
+}
+
+.active {
+  background-color: $light;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+  transition: $trans;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Fading animation */
+.slide {
+  -moz-animation-name: slide;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 1.5s;
+  -o-animation-name: slide;
+  -o-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-name: slide;
+  animation-duration: 1.5s;
+}
+
+@-o-keyframes slide {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slide {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slide {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// end of landing page styling
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+//main section styling
+
+.section-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .heading {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .sub-heading {
+    color: $red;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  img {
+    margin: auto;
+  }
+}
+.about-section {
+  img {
+    width: 70vw;
+    max-width: 400px;
+    object-fit: cover;
+  }
+  p {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .sub-heading {
+    width: 85%;
+  }
+  .about-social-container {
+    width: 150px;
+    margin: auto;
+    svg {
+      fill: $medium;
+      transition: $trans;
+      &:hover {
+        fill: $red;
+      }
+    }
+  }
+  .right-about-section {
+    .sub-heading {
+      color: $red;
+    }
+  }
+}
+
+.team-section {
+  background: $dark !important;
+  .heading {
+    color: $light;
+  }
+  .team-card__title {
+    margin: 1rem 0;
+    color: $light;
+  }
+  p {
+    color: $medium;
+  }
+  .team-card-container {
+    grid-template-rows: repeat(3, 1fr);
+    .team-card {
+      margin-bottom: 2rem;
+    }
+
+    .team-card__picture {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 100%;
+      border: 1px solid $red;
+    }
+    .team-card__bio {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+
+.projects-gallery {
+  width: 100%;
+  height: 100%;
+  row-gap: 1rem;
+  .projects-gallery__card {
+    width: 150px;
+    margin: auto;
+    &--image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    &--title {
+      border-bottom: 2px solid $red;
+    }
+  }
+}
+
+.contact-section {
+  // insert you background image here for
+  // the contact section parallax effect
+  background: url('');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 300px !important;
+  padding: 0;
+  align-content: stretch !important;
+  justify-content: stretch !important;
+  .bg-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-content: center;
+    .heading {
+      color: $light;
+      width: 90%;
+    }
+    p {
+      width: 90%;
+      margin: auto;
+      color: $light;
+    }
+    .email-btn-link {
+      width: 100px;
+      display: grid;
+      text-decoration: none;
+      margin: 1rem auto;
+    }
+    .email-btn {
+      border-radius: 5px;
+      border: 0;
+      transition: $trans;
+      background: $light;
+      padding: 0.75rem 0;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        background: $red;
+        color: $light;
+        box-shadow: inset 90px 0 50px $dark;
+      }
+    }
+    .contact-social-container {
+      margin-top: 1rem;
+      svg {
+        fill: $red;
+        transition: $trans;
+        &:hover {
+          fill: $light;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+  background: $medium;
+  color: $light;
+}
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+//the utility classes are declared here
+
+// cursor pointer
+.cursor {
+  cursor: pointer;
+}
+
+// making it all fullscreen
+.full-vp {
+  width: 100%;
+  height: 100%;
+}
+//setting the display to grid
+.grid {
+  display: grid;
+}
+
+//making everyhting centered for the mobile first approach
+.center-content {
+  place-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+//declaring the amount of columns
+.cols-1 {
+  grid-template-columns: repeat(1, minmax(10px, 1fr));
+}
+.cols-2 {
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
+}
+
+.cols-3 {
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
+}
+
+.cols-4 {
+  grid-template-columns: repeat(4, minmax(10px, 1fr));
+}
+
+.cols-5 {
+  grid-template-columns: repeat(5, minmax(10px, 1fr));
+}
+
+.cols-6 {
+  grid-template-columns: repeat(6, minmax(10px, 1fr));
+}
+
+.cols-7 {
+  grid-template-columns: repeat(7, minmax(10px, 1fr));
+}
+
+.cols-8 {
+  grid-template-columns: repeat(8, minmax(10px, 1fr));
+}
+
+.cols-9 {
+  grid-template-columns: repeat(9, minmax(10px, 1fr));
+}
+
+.cols-10 {
+  grid-template-columns: repeat(10, minmax(10px, 1fr));
+}
+
+.cols-11 {
+  grid-template-columns: repeat(11, minmax(10px, 1fr));
+}
+
+.cols-12 {
+  grid-template-columns: repeat(12, minmax(10px, 1fr));
+}
+
+////////////////////////
+////////////////////////
+////////////////////////
+
+// the media queries are added now for responsiveness
+
+@media only screen and (min-width: 650px) {
+  .team-section {
+    .team-card-container {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .projects-gallery {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .about-section {
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    height: 400px;
+    .left-about-section {
+      display: grid;
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      align-content: center;
+      float: left;
+    }
+    .right-about-section {
+      display: grid;
+      width: 50%;
+      margin: auto;
+      align-content: center;
+      float: right;
+      height: 100%;
+    }
+  }
+  .team-section {
+    .team-card-container {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .projects-gallery {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

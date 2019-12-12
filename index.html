@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!-- the beginning of the website -->
+    <!-- all elements are nested in the <app-root> -->
+    <!-- this is for purpose of making a sinlge page application -->
+
+    <!-- ----------------------------------------------- -->
+    <!-- ------------------ IMPORTANT ------------------ -->
+    <!--  check the css file for description of classes  -->
+    <!--  you are free to make any changes that you need -->
+    <!--  changes can be made freely to the html and css -->
+    <!--        This is after all only a template        -->
+    <!-- ----------------------------------------------- -->
+    <!-- ----------------------------------------------- -->
+
+    <div class="app-root">
+      <!-- the beginning of the navigation bar -->
+      <nav class="grid cols-3 rows-1 center-content navbar">
+        <div class="grid center-content rows-1 cols-3 nav-social-container">
+          <!-- these can be replaced with other links and icons -->
+          <a href="#" class="social-links "
+            ><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path
+                d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-links ">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path
+                d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-links ">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path
+                d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <!-- the brand container allows the brand to fill the space -->
+        <div class="navbar-brand">
+          <!-- 
+			  the actual brand text - can be replaced by image or svg element instead of being text 
+			-->
+          <a href="#">
+            <h2>Qrypto</h2>
+          </a>
+        </div>
+        <!-- navigation burger-style menu toggle button -->
+        <div onclick="openMenu()" class="grid center-content  menu-btn cursor">
+          <!-- the classic 3 bars for the burger button -->
+          <div class="menu-btn__bar menu-btn__bar--1"></div>
+          <div class="menu-btn__bar menu-btn__bar--2"></div>
+          <div class="menu-btn__bar menu-btn__bar--3"></div>
+        </div>
+      </nav>
+      <!-- the end of the navbar element -->
+
+      <!-- beginning of the navigation menu and links -->
+      <div class="nav-menu grid rows-5 cols-1 full-vp center-content">
+        <a onclick="openMenu()" href="#" class="nav-menu__link nav-mneu__link--1">Home</a>
+        <a onclick="openMenu()" href="#" class="nav-menu__link nav-mneu__link--2">about</a>
+        <a onclick="openMenu()" href="#" class="nav-menu__link nav-mneu__link--3">our team</a>
+        <a onclick="openMenu()" href="#" class="nav-menu__link nav-mneu__link--4">projects</a>
+        <a onclick="openMenu()" href="#" class="nav-menu__link nav-mneu__link--5">contact</a>
+      </div>
+      <!-- end of the navigaiton menu -->
+
+      <!-- start of landing page -->
+      <!-- this landing page contains a parallax effect as well as animage slideshow -->
+      <!-- begin slideshow landing page -->
+      <div class=" full-vp landing-page">
+        <div class=" full-vp landing-overlay ">
+          <div style="text-align:center">
+            <h2>Another Lorem Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quam.</p>
+            <hr />
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <div class="mySlides mySlide1 slide">
+          <img src="" alt="" />
+        </div>
+
+        <div class="mySlides mySlide2 slide">
+          <img src="" alt="" />
+        </div>
+
+        <div class="mySlides mySlide3 slide">
+          <img src="" alt="" />
+        </div>
+      </div>
+      <!-- end of landing page -->
+
+      <!-- starting of the main content and info sections -->
+      <main class="full-vp">
+        <section id="about" class="about-section  center-content full-vp section-container">
+          <!-- the left sied of the about section -->
+          <div class="grid cols-1 center-content left-about-section">
+            <!-- change the header to your needs -->
+            <h2 class="heading">The story behind the Qrypto template website.</h2>
+
+            <!-- replace img src with an image of your choice -->
+            <img src="" alt="" />
+          </div>
+          <!-- right side of the about section -->
+          <div class=" center-content right-about-section">
+            <h3 class="sub-heading">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, at.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officia fugiat,
+              perspiciatis accusantium, voluptatibus consectetur magnam maxime, et ipsum quasi
+              explicabo eos culpa quae! Obcaecati iste explicabo sed atque magnam ad, neque ducimus
+              similique ipsum quos perferendis? Iure perferendis quibusdam doloremque, explicabo ut
+              hic, similique molestiae commodi doloribus enim voluptates.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officia fugiat,
+              perspiciatis accusantium, voluptatibus consectetur magnam maxime, et ipsum quasi
+              explicabo eos culpa quae! Obcaecati iste explicabo sed atque magnam ad, neque ducimus
+              similique ipsum quos perferendis? Iure perferendis quibusdam doloremque, explicabo ut
+              hic, similique molestiae commodi doloribus enim voluptates.
+            </p>
+            <!-- a container to hold some social links -->
+            <div class="grid center-content rows-1 cols-3 about-social-container">
+              <!-- these can be replaced with other links and icons -->
+              <a href="#" class="social-links "
+                ><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path
+                    d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-links ">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path
+                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-links ">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path
+                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- end of about section -->
+        <!-- begin our team section -->
+        <section
+          id="our-team"
+          class=" team-section section-container center-content grid   full-vp"
+        >
+          <div class="grid center-content heading-container">
+            <!-- the heading for the team section it can be change as needed -->
+            <h2 class="heading">Get to know us</h2>
+            <h3 class="sub-heading">who we are and what we do.</h3>
+          </div>
+
+          <!-- the team cards to displat as a mini profile -->
+          <!-- again all the images and text are tobe replaced as needed -->
+          <div class=" grid rows-3 center-content team-card-container">
+            <div class="grid content-center team-card">
+              <img src="" alt="" class="team-card__picture" />
+              <!-- name of member here -->
+              <h3 class="team-card__title">Lorem Ipsum</h3>
+              <!-- short bio less than 20 words -->
+              <p class="team-card__bio">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate provident
+                facere quisquam quas accusantium maxime fuga, dignissimos ratione itaque ipsam?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic cumque, odio quisquam
+                iusto iure quis culpa officiis obcaecati sapiente tempore?
+              </p>
+            </div>
+            <div class=" grid content-center rows-3 team-card">
+              <img src="" alt="" class="team-card__picture" />
+              <!-- name of member here -->
+              <h3 class="team-card__title">Lorem Ipsum</h3>
+              <!-- short bio less than 20 words -->
+              <p class="team-card__bio">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate provident
+                facere quisquam quas accusantium maxime fuga, dignissimos ratione itaque ipsam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni et cupiditate
+                consequuntur dolorem numquam perferendis earum laudantium minima eum veritatis?
+              </p>
+            </div>
+            <div class="grid content-center  team-card">
+              <img src="" alt="" class="team-card__picture" />
+              <!-- name of member here -->
+              <h3 class="team-card__title">Lorem Ipsum</h3>
+              <!-- short bio less than 20 words -->
+              <p class="team-card__bio">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate provident
+                facere quisquam quas accusantium maxime fuga, dignissimos ratione itaque ipsam?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, mollitia. In at
+                nostrum, maiores adipisci exercitationem tempore alias repellat et!
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- end of our team section -->
+
+        <!-- start of the projcts section -->
+        <section
+          id="projects"
+          class="full-vp grid projects-section  section-container center-content"
+        >
+          <!-- the heading section again change it as needed -->
+          <h2 class="heading">The work we have done so far.</h2>
+          <h3 class="sub-heading">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, beatae.
+          </h3>
+          <!-- the start of projects gallery -->
+
+          <div class="grid rows-3  projects-gallery">
+            <!-- the project card -->
+            <div class="projects-gallery__card">
+              <!-- the project image -->
+              <img src="" alt="" class="projects-gallery__card--image" />
+              <!-- the project title -->
+              <h3 class="projects-gallery__card--title">
+                Lorem, ipsum dolor.
+              </h3>
+              <!-- the project description -->
+              <p class="projects-gallery__card--description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quis!
+              </p>
+            </div>
+            <div class="projects-gallery__card">
+              <!-- the project image -->
+              <img src="" alt="" class="projects-gallery__card--image" />
+              <!-- the project title -->
+              <h3 class="projects-gallery__card--title">
+                Lorem, ipsum dolor.
+              </h3>
+              <!-- the project description -->
+              <p class="projects-gallery__card--description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quis!
+              </p>
+            </div>
+            <div class="projects-gallery__card">
+              <!-- the project image -->
+              <img src="" alt="" class="projects-gallery__card--image" />
+              <!-- the project title -->
+              <h3 class="projects-gallery__card--title">
+                Lorem, ipsum dolor.
+              </h3>
+              <!-- the project description -->
+              <p class="projects-gallery__card--description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quis!
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- end of projects section -->
+
+        <!-- start of the contact section -->
+        <section
+          id="contact"
+          class="contact-section section-container full-vp grid  center-content"
+        >
+          <div class="bg-overlay">
+            <!-- the heading section again change it as needed -->
+            <h2 class="heading">Lets get in touch.</h2>
+            <h3 class="sub-heading">
+              Maybe we can go for a coffee?
+            </h3>
+            <p>
+              Why not send us an email?
+            </p>
+            <!-- change the href to "mailto:youremail@email.co" -->
+            <a href="mailto:insert.an@email.here" class="email-btn-link">
+              <button class="cursor email-btn">Send Email</button>
+            </a>
+
+            <p>
+              Or you can also reach out to us via social media.
+            </p>
+            <div class="contact-social-container">
+              <a href="#" class="social-links "
+                ><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path
+                    d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-links ">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path
+                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-links ">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path
+                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- this is the general footer -->
+        <footer class="  section-container center-content">
+          <!-- generalcopyright section -->
+          <p>Qrypto &copy; Copyright 2019</p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="./js/main.js" async defer></script>
+  </body>
+</html>
